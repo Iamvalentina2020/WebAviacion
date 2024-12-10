@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escuela de Aviación - Avior Corporation</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="CSS/styles.css"> <!-- Ajuste a ruta relativa -->
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -16,24 +16,22 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/HTML/acerca.html">Acerca de</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/HTML/cursos.html">Cursos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/HTML/galeria.html">Galería</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/HTML/LogIn.html">Iniciar Sesion</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="HTML/acerca.html">Acerca de</a></li>
+                    <li class="nav-item"><a class="nav-link" href="HTML/cursos.html">Cursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="HTML/galeria.html">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="HTML/LogIn.html">Iniciar Sesion</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="bg-danger text-white text-center py-5" >
+    <header class="bg-danger text-white text-center py-5">
         <div class="container">
             <h1 class="display-4">Bienvenido a la Escuela de Aviación</h1>
             <p class="lead">Formamos pilotos capacitados para conquistar los cielos</p>
-            <a href="cursos.html" class="btn btn-light">Descubre Nuestros Cursos</a>
+            <a href="HTML/cursos.html" class="btn btn-light">Descubre Nuestros Cursos</a>
         </div>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
     </header>
 
     <section class="py-5 bg-light">
@@ -49,99 +47,43 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <img src="https://www.aviorcorporation.com.bo/wp-content/uploads/2020/04/Curso_0.jpg" class="card-img-top" alt="Inducción a Piloto Privado">
+                        <img src="RecursosImagenes/curso1.jpg" class="card-img-top" alt="Inducción a Piloto Privado">
                         <div class="card-body">
                             <h5 class="card-title">Introducción a Piloto Privado</h5>
                             <p class="card-text">Curso introductorio para futuros pilotos privados.</p>
-                            <a href="privado.html" class="btn btn-danger">Más Información</a>
+                            <a href="HTML/privado.html" class="btn btn-danger">Más Información</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <img src="https://www.aviorcorporation.com.bo/wp-content/uploads/2020/07/Curso_02.jpg" class="card-img-top" alt="Inducción a Tripulante de Cabina">
+                        <img src="RecursosImagenes/curso2.jpg" class="card-img-top" alt="Inducción a Tripulante de Cabina">
                         <div class="card-body">
                             <h5 class="card-title">Inducción a Tripulante de Cabina</h5>
                             <p class="card-text">Curso para formar tripulantes de cabina altamente capacitados.</p>
-                            <a href="cabina.html" class="btn btn-danger">Más Información</a>
-                        
+                            <a href="HTML/cabina.html" class="btn btn-danger">Más Información</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <img src="/RecursosImagenes/instructordevuelo.jpg" class="card-img-top" alt="Inducción a Piloto Comercial">
+                        <img src="RecursosImagenes/curso3.jpg" class="card-img-top" alt="Inducción a Piloto Comercial">
                         <div class="card-body">
                             <h5 class="card-title">Inducción a Piloto Comercial</h5>
                             <p class="card-text">Curso avanzado para convertirte en piloto comercial.</p>
-                            <a href="comercial.html" class="btn btn-danger">Más Información</a>
+                            <a href="HTML/comercial.html" class="btn btn-danger">Más Información</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4">Testimonios de Nuestros Estudiantes</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h5 class="card-title">Juan Pérez</h5>
-                            <p class="card-text">"La mejor decisión de mi vida fue estudiar aquí. Los instructores son excelentes y la formación es de alta calidad."</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h5 class="card-title">María López</h5>
-                            <p class="card-text">"Gracias a la Escuela de Aviación, ahora soy piloto comercial. ¡Recomiendo esta escuela a todos!"</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h5 class="card-title">Carlos García</h5>
-                            <p class="card-text">"Una experiencia increíble. Aprendí mucho y hice grandes amigos en el camino."</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    
 
     <footer class="bg-dark text-white text-center py-4">
         <div class="container">
             <p>&copy; 2023 Escuela de Aviación - Avior Corporation. Todos los derechos reservados.</p>
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="/HTML/contacto.html" class="text-white">Contacto</a></li>
-                <li class="list-inline-item"><a href="/HTML/ubicacion.html" class="text-white">Ubicación</a></li>
-                <li class="list-inline-item"><a href="/HTML/faq.html" class="text-white">Preguntas Frecuentes</a></li>
-                <li class="list-inline-item"><a href="/HTML/noticicas.html" class="text-white">Noticias</a></li>
-                <li class="list-inline-item"><a href="/HTML/inscripciones.html" class="text-white">Inscripciones</a></li>
-                <li class="list-inline-item"><a href="/HTML/xchatbot.html" class="text-white">Probar chatbot</a></li>
-            </ul>
-            <div>
-                <a href="https://www.facebook.com" target="_blank" class="text-white mx-2">
-                    <i class="fab fa-facebook fa-2x"></i>
-                </a>
-                <a href="https://www.instagram.com" target="_blank" class="text-white mx-2">
-                    <i class="fab fa-instagram fa-2x"></i>
-                </a>
-                <a href="https://twitter.com" target="_blank" class="text-white mx-2">
-                    <i class="fab fa-x fa-2x"></i> 
-                </a>
-            </div>
         </div>
     </footer>
-    
-    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
