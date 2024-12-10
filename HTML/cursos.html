@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/CSS/styles.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Escuela de Aviación</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="/HTML/index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/HTML/acerca.html">Acerca de</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Cursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/HTML/galeria.html">Galería</a></li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-light position-relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                            <i class="bi bi-cart3"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                <span id="cartCount">0</span>
+                                <span class="visually-hidden">unread messages</span>
+                            </span> 
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-danger text-white text-center py-5" style="background-image: url('avion-cursos.jpg'); background-size: cover;">
+        <div class="container">
+            <h1 class="display-4">Cursos de Aviación</h1>
+            <p class="lead">Ofrecemos programas de formación para todos los niveles, desde pilotos privados hasta pilotos comerciales.</p>
+        </div>
+    </header>
+
+    <!-- Sección de Ofertas -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Ofertas Especiales</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card border-warning position-relative">
+                        <div class="badge bg-danger text-white position-absolute top-0 end-0 p-2">
+                            ¡Oferta!
+                        </div>
+                        <img src="/RecursosImagenes/WhatsApp Image 2024-12-04 at 14.33.58 (1).jpeg" class="card-img-top" alt="Curso Piloto Privado">
+                        <div class="card-body">
+                            <h5 class="card-title">Curso Piloto Privado</h5>
+                            <p class="card-text">Aprende a volar con seguridad y obtén tu licencia de piloto privado.</p>
+                            <div id="countdown1" class="mb-3 text-danger fs-4"></div>
+                            <button class="btn btn-danger">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-warning position-relative">
+                        <div class="badge bg-danger text-white position-absolute top-0 end-0 p-2">
+                            ¡Oferta!
+                        </div>
+                        <img src="/RecursosImagenes/WhatsApp Image 2024-12-04 at 14.33.57 (3).jpeg" class="card-img-top" alt="Curso Piloto Comercial">
+                        <div class="card-body">
+                            <h5 class="card-title">Curso Piloto Comercial</h5>
+                            <p class="card-text">Aprende a volar aviones comerciales y comienza tu carrera profesional.</p>
+                            <div id="countdown2" class="mb-3 text-danger fs-4"></div>
+                            <button class="btn btn-danger">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-warning position-relative">
+                        <div class="badge bg-danger text-white position-absolute top-0 end-0 p-2">
+                            ¡Oferta!
+                        </div>
+                        <img src="/RecursosImagenes/WhatsApp Image 2024-12-04 at 14.33.57 (2).jpeg" class="card-img-top" alt="Curso Instructor de Vuelo">
+                        <div class="card-body">
+                            <h5 class="card-title">Curso Instructor de Vuelo</h5>
+                            <p class="card-text">Conviértete en instructor de vuelo certificado y enseña a futuros pilotos.</p>
+                            <div id="countdown3" class="mb-3 text-danger fs-4"></div>
+                            <button class="btn btn-danger">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4 text-light">Nuestros Cursos</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="/RecursosImagenes/WhatsApp Image 2024-12-04 at 14.33.58 (1).jpeg" class="card-img-top" alt="Curso Piloto Privado">
+                        <div class="card-body">
+                            <h5 class="card-title">Curso Piloto Privado</h5>
+                            <p class="card-text">Aprende a volar con seguridad y obtén tu licencia de piloto privado.</p>
+                            <button class="btn btn-danger" id="btn1" data-product="Curso Piloto Privado" data-price="1500">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="/RecursosImagenes/WhatsApp Image 2024-12-04 at 14.33.57 (3).jpeg" class="card-img-top" alt="Curso Piloto Comercial">
+                        <div class="card-body">
+                            <h5 class="card-title">Curso Piloto Comercial</h5>
+                            <p class="card-text">Aprende a volar aviones comerciales y comienza tu carrera profesional.</p>
+                            <button class="btn btn-danger" id="btn2" data-product="Curso Piloto Comercial" data-price="2500">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="/RecursosImagenes/WhatsApp Image 2024-12-04 at 14.33.57 (2).jpeg" class="card-img-top" alt="Curso Instructor de Vuelo">
+                        <div class="card-body">
+                            <h5 class="card-title">Curso Instructor de Vuelo</h5>
+                            <p class="card-text">Conviértete en instructor de vuelo certificado y enseña a futuros pilotos.</p>
+                            <button class="btn btn-danger" id="btn3" data-product="Curso Instructor de Vuelo" data-price="3000">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="offcanvas offcanvas-end bg-dark text-light" data-bs-backdrop="static" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito de Compras</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <table id="cartTable" class="table table-bordered text-light">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio (Bs)</th>
+                        <th>Cantidad</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-body">
+                    
+                </tbody>
+            </table>
+            <p>Total: <span id="total">0</span> Bs</p>
+            <button id="clearCart" class="btn btn-danger">Vaciar Carrito</button>
+            <button id="checkout" class="btn btn-success mt-3">Concretar Compra</button>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p>&copy; 2023 Escuela de Aviación - Avior Corporation. Todos los derechos reservados.</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="contacto.html" class="text-white">Contacto</a></li>
+                <li class="list-inline-item"><a href="ubicacion.html" class="text-white">Ubicación</a></li>
+                <li class="list-inline-item"><a href="faq.html" class="text-white">Preguntas Frecuentes</a></li>
+                <li class="list-inline-item"><a href="noticicas.html" class="text-white">Noticias</a></li>
+                <li class="list-inline-item"><a href="inscripciones.html" class="text-white">Inscripciones</a></li>
+                <li class="list-inline-item"><a href="chatbot.html" class="text-white">Probar chatbot</a></li>
+            </ul>
+            <div>
+                <a href="https://www.facebook.com" target="_blank" class="text-white mx-2">
+                    <i class="fab fa-facebook fa-2x"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="text-white mx-2">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" class="text-white mx-2">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/JS/carritoaviacion.js"></script>
+    <script src="/JS/temporizador.js"></script>
+</body>
+</html>

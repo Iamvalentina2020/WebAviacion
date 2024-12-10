@@ -1,0 +1,416 @@
+/* Importación de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+
+/* Variables CSS */
+:root {
+    --primary-red: #dc3545;
+    --primary-red-dark: #c82333;
+    --primary-red-light: #ff6b81;
+    --dark-bg: #000000;
+    --light-bg: #f8f9fa;
+    --text-light: #ffffff;
+    --text-dark: #212529;
+    --gray-light: #f0f0f0;
+    --gray-dark: #343a40; /* Cambiado de #00101f a #343a40 */
+    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --contrast-shadow: 0 8px 25px rgba(52, 58, 64, 0.5); /* Gray shadow for contrast */
+    --transition-speed: 0.3s;
+    --animation-duration: 1s;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, var(--dark-bg), #4a4a4a); /* Cambiado de #1a1a4a a #4a4a4a */
+}
+
+/* Navbar personalizada */
+.navbar {
+    padding: 1rem 0;
+    transition: all var(--transition-speed) ease;
+    background: linear-gradient(to right, var(--dark-bg), var(--dark-bg)) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--text-light) !important;
+    text-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
+}
+
+.nav-link {
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 1rem !important;
+    margin: 0 0.2rem;
+    color: var(--text-light) !important;
+    text-shadow: 0 0 3px rgba(220, 53, 69, 0.3);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--primary-red);
+    transition: all var(--transition-speed) ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Header */
+header.bg-danger {
+    background: linear-gradient(45deg, var(--primary-red), var(--primary-red-dark)) !important;
+    padding: 6rem 0 !important;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/WebVale/RecursosImagenes/AVION.JPG') center/cover;
+    opacity: 0.15;
+    z-index: 0;
+    filter: contrast(120%) saturate(130%);
+}
+
+header .container {
+    position: relative;
+    z-index: 1;
+}
+
+header .display-4 {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5),
+                 0 0 20px rgba(220, 53, 69, 0.5);
+    letter-spacing: 1px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+header .btn-light {
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+    transition: all var(--transition-speed) ease;
+    border: none;
+}
+
+header .btn-light:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Secciones */
+section {
+    padding: 5rem 0;
+}
+
+section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background: var(--primary-red);
+    bottom: -10px;
+    left: 25%;
+}
+
+/* Cards */
+.card {
+    border: none;
+    transition: all 0.4s ease;
+    box-shadow: var(--card-shadow);
+    height: 100%;
+    background: var(--light-bg);
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: var(--card-shadow), var(--contrast-shadow);
+}
+
+.card:active {
+    transform: scale(1.05);
+    box-shadow: var(--contrast-shadow);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    filter: contrast(110%) brightness(110%);
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+    filter: contrast(120%) brightness(115%);
+}
+
+.card-body {
+    position: relative;
+    z-index: 1;
+    background: var(--light-bg);
+    border-top: 1px solid rgba(220, 53, 69, 0.1);
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-weight: 600;
+    color: var(--text-dark);
+    position: relative;
+    display: inline-block;
+    animation: fadeIn 1s ease-out, neonPulse 2s infinite;
+}
+
+.card-title::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: var(--primary-red);
+    transition: width 0.3s ease;
+}
+
+.card:hover .card-title::after {
+    width: 100%;
+}
+
+/* Botones */
+.btn-danger {
+    background: linear-gradient(45deg, var(--primary-red), var(--primary-red-dark));
+    border: none;
+    padding: 0.8rem 2rem;
+    transition: all var(--transition-speed) ease;
+    position: relative;
+    overflow: hidden;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    z-index: 1;
+    color: var(--text-light);
+}
+
+.btn-danger::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.btn-danger:hover::before {
+    left: 100%;
+}
+
+.btn-danger:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(220, 53, 69, 0.4),
+                0 0 15px rgba(52, 58, 64, 0.2);
+    color: white !important;
+}
+
+/* Testimonios */
+.bg-light {
+    background: linear-gradient(135deg, var(--light-bg), #e9ecef) !important;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, var(--dark-bg), var(--dark-bg));
+    padding: 3rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+footer a {
+    color: var(--text-light) !important;
+    transition: all var(--transition-speed) ease;
+    text-decoration: none;
+    position: relative;
+}
+
+footer a:hover {
+    color: var(--primary-red) !important;
+    text-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
+}
+
+footer .fab {
+    transition: all var(--transition-speed) ease;
+}
+
+footer .fab:hover {
+    transform: scale(1.2) rotate(5deg);
+    color: var(--primary-red);
+    text-shadow: 0 0 10px rgba(220, 53, 69, 0.7);
+}
+
+/* Efectos de hover para enlaces sociales */
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: all var(--transition-speed) ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes neonPulse {
+    0% { text-shadow: none; }
+    50% { text-shadow: 0 0 10px rgba(220, 53, 69, 0.5),
+                       0 0 20px rgba(220, 53, 69, 0.3),
+                       0 0 30px rgba(220, 53, 69, 0.1); }
+    100% { text-shadow: none; }
+}
+
+.card, .display-4, .lead {
+    animation: fadeIn var(--animation-duration) ease-out;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        padding: 4rem 0 !important;
+    }
+
+    .navbar-collapse {
+        background: var(--dark-bg);
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    .card-img-top {
+        height: 180px;
+    }
+}
+.texto-claro
+{color: white;}
+
+/* Sección de la galería */
+.GaleriaCont {
+    display: flex;
+    justify-content: space-around; /* Distribuye las imágenes de forma equidistante */
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Contenedor individual para cada imagen */
+.GaleriaImgCont {
+    width: 250px;
+    height: 350px;
+    position: relative;
+    transform-style: preserve-3d;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor de cada imagen */
+}
+
+/* Efecto de movimiento y sombra en hover */
+.GaleriaImgCont:hover {
+    transform: translateY(-10px) scale(1.05); /* Desplazamiento suave hacia arriba y aumento del tamaño */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Aumenta la sombra cuando el ratón pasa por encima */
+    border: 2px solid #dc3545; /* Borde rojo visible en hover */
+}
+
+/* Animación de entrada inicial para las imágenes */
+.GaleriaImgCont {
+    animation: slideIn 0.8s ease-out;
+}
+
+/* Estilos de las imágenes dentro de la galería */
+.GaleriaImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que las imágenes no se deformen */
+    border-radius: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Efecto de zoom y opacidad en hover */
+.GaleriaImgCont:hover .GaleriaImg {
+    transform: scale(1.1); /* Efecto de zoom en la imagen */
+    opacity: 0.9; /* La imagen se vuelve un poco menos opaca */
+}
+
+/* Agregar bordes sutiles */
+.GaleriaImgCont {
+    border: 2px solid transparent;
+    transition: border 0.3s ease;
+}
+
+/* Animación de rebote en el contenedor al pasar el ratón */
+@keyframes slideIn {
+    0% {
+        transform: translateY(30px); /* Desplazamiento hacia abajo al principio */
+        opacity: 0; /* Empezar invisible */
+    }
+    100% {
+        transform: translateY(0); /* Vuelve a su posición original */
+        opacity: 1; /* Se hace visible */
+    }
+}
+
+/* Media Queries para dispositivos más pequeños */
+@media (max-width: 768px) {
+    .GaleriaImgCont {
+        width: 100%;
+        height: 250px;
+    }
+}

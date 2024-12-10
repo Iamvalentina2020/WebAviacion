@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes - FAQ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <script src="/WebVale/js/faq.js" defer></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Escuela de Aviación</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/HTML/index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/HTML/acerca.html">Acerca de</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/HTML/cursos.html">Cursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/HTML/galeria.html">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/HTML/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-danger text-white text-center py-5">
+        <div class="container">
+            <h1>Preguntas Frecuentes</h1>
+            <p class="lead">Encuentra las respuestas a tus dudas aquí</p>
+        </div>
+    </header>
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Preguntas Frecuentes</h2>
+            <div class="accordion" id="faqAccordion">
+
+                <!-- FAQ Item 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq1">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                            ¿Qué es el servicio que ofrecemos?
+                        </button>
+                    </h2>
+                    <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Ofrecemos soluciones tecnológicas personalizadas para empresas, con enfoque en eficiencia y calidad. Nuestro equipo de expertos se dedica a entender tus necesidades específicas para brindar servicios que realmente impulsen tu negocio.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                            ¿Cómo puedo contactarlos?
+                        </button>
+                    </h2>
+                    <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Puedes contactarnos a través de nuestro formulario de contacto en esta página, por email a contacto@ejemplo.com o llamando al +591 69322199. También estamos disponibles en nuestras redes sociales para responder a tus consultas.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                            ¿Ofrecen soporte técnico?
+                        </button>
+                    </h2>
+                    <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Sí, ofrecemos soporte técnico 24/7 para resolver cualquier inconveniente o duda que tengas. Nuestro equipo de soporte está siempre listo para ayudarte a mantener tus sistemas funcionando sin problemas.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq4">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                            ¿Cómo puedo registrarme?
+                        </button>
+                    </h2>
+                    <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Solo tienes que completar el formulario de registro en nuestra página principal, y recibirás un correo de confirmación. Una vez verificado, podrás acceder a todos nuestros servicios y recursos exclusivos.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq5">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                            ¿Es seguro usar sus servicios?
+                        </button>
+                    </h2>
+                    <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="faq5" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Sí, tomamos la seguridad de tus datos muy en serio. Usamos encriptación avanzada para proteger toda la información y cumplimos con las normativas de privacidad más estrictas para garantizar la confidencialidad y seguridad de tus datos.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <div class="text-center py-3">
+        <a href="/HTML/index.html" class="btn btn-danger">Volver al Inicio</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p>&copy; 2024 Escuela de Aviación. Todos los derechos reservados.</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="contacto.html" class="text-white">Contacto</a></li>
+                <li class="list-inline-item"><a href="ubicacion.html" class="text-white">Ubicación</a></li>
+                <li class="list-inline-item"><a href="faq.html" class="text-white">FAQ</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
